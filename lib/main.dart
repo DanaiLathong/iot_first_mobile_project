@@ -1,27 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:iot_first_mobile_project/views/welcome_ui.dart';
+import 'package:iot_first_mobile_project/views/login_ui.dart';
+import 'package:iot_first_mobile_project/views/welcome_ui.dart';
 
 void main() {
   runApp(
-    //เรียกใช้ คลาส ที่เรียกใช้งาน widget หลักของแอป : MaterialApp()
-    IotSAUFirst(),
+    //เรียกใช้ คลาส ที่เรียกใช้งาน Widget หลักของแอปฯ : MaterialApp()
+    IoTSAUFirst(),
   );
 }
 
 //+++++++++++++++++++++++++++++++++++++
-class IotSAUFirst extends StatefulWidget {
-  const IotSAUFirst({super.key});
+class IoTSAUFirst extends StatefulWidget {
+  const IoTSAUFirst({super.key});
 
   @override
-  State<IotSAUFirst> createState() => _IotSAUFirstState();
+  State<IoTSAUFirst> createState() => _IoTSAUFirstState();
 }
 
-class _IotSAUFirstState extends State<IotSAUFirst> {
+class _IoTSAUFirstState extends State<IoTSAUFirst> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeUi(),
+      home: WelcomeUi(), //เรียกใช้งานหน้าจอแรกของแอปฯ
     );
   }
 }

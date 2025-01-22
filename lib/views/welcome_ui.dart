@@ -1,6 +1,7 @@
 // ignore_for_file: sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:iot_first_mobile_project/views/login_ui.dart';
 
 class WelcomeUi extends StatefulWidget {
   const WelcomeUi({super.key});
@@ -17,33 +18,46 @@ class _WelcomeUiState extends State<WelcomeUi> {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.1,
+            ),
             Image.asset(
               'assets/images/logo.png',
+              // width: 250.0,
               width: MediaQuery.of(context).size.width * 0.7,
             ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.25),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.28,
+            ),
             Text(
               'IoT SAU APP',
               style: TextStyle(
-                fontSize: MediaQuery.of(context).size.height * 0.025,
+                fontSize: MediaQuery.of(context).size.height * 0.04,
                 fontWeight: FontWeight.bold,
               ),
             ),
             Text(
-              'Welcome to IoT SAU App',
+              'Welcome to IoT SAU APP',
             ),
             Text(
-              'Created by Bb SAU',
+              'Created by NinniN SAU',
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.025,
+              height: MediaQuery.of(context).size.height * 0.035,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    //เปิดหน้าจอแบบย้อนกลับได้
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginUI(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'LOGIN',
                     style: TextStyle(
@@ -57,16 +71,25 @@ class _WelcomeUiState extends State<WelcomeUi> {
                       50.0,
                     ),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                      7.0,
-                    )),
+                      borderRadius: BorderRadius.circular(
+                        7.0,
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.035,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    //เปิดหน้าจอแบบย้อนกลับได้
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginUI(),
+                      ),
+                    );
+                  },
                   child: Text(
                     'SIGNUP',
                     style: TextStyle(
