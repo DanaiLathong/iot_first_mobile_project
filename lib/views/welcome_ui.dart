@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:iot_first_mobile_project/views/login_ui.dart';
+import 'package:iot_first_mobile_project/views/signup_ui.dart';
 
 class WelcomeUi extends StatefulWidget {
   const WelcomeUi({super.key});
@@ -86,7 +87,7 @@ class _WelcomeUiState extends State<WelcomeUi> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => LoginUI(),
+                        builder: (context) => SignupUI(),
                       ),
                     );
                   },
